@@ -1,0 +1,99 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 4vh;
+    font-family: system-ui;
+  
+    @media (max-width: 768px) {
+      .navRight {
+        display: none;
+      }
+    }
+  }
+  
+  .navLeft {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navRight {
+    display: flex;
+    align-items: center;
+  
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+  
+    @media (max-width: 768px) {
+      margin: 5px;
+      text-align: center;
+    }
+  }
+
+  .link:hover {
+    color: grey;
+  }
+  
+  .hamburgerMenu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  
+    .bar {
+      width: 30px;
+      height: 4px;
+      background-color: #000;
+      margin: 4px;
+      transition: 0.4s;
+  
+      &.open {
+        transform: rotate(-90deg) translate(-6px, 6px);
+      }
+    }
+  }
+  
+  .mobileMenu {
+    display: none;
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      padding: 10px;
+      z-index: 999;
+    }
+  }
+  
+  .showMenu {
+    display: flex;
+  }
+  
