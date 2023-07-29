@@ -44,13 +44,30 @@ function index() {
           >
             <SwiperSlide className={styles.swiper_slide}>
               <img className={styles.img} src={image1} alt="slide_image" />
+                {/* <div className={styles.overlay}>
+                    <p>This is the overlay content for slide 1</p>
+                </div> */}
             </SwiperSlide>
             <SwiperSlide className={styles.swiper_slide}>
               <img className={styles.imgComputer} src={image2} alt="slide_image" />
+              {/* <div className={styles.overlay}>
+                    <p>This is the overlay content for slide 1</p>
+                </div> */}
             </SwiperSlide>
             <SwiperSlide className={styles.swiper_slide}>
-              <img className={styles.img} src={image1} alt="slide_image" />
+              <img className={styles.img} src={image3} alt="slide_image" />
+              {/* <div className={styles.overlay}>
+                    <p>This is the overlay content for slide 1</p>
+                </div> */}
             </SwiperSlide>
+            {/* <div className={styles.sliderController}>
+                <div className="swiper-button-prev slider-arrow">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                </div>
+                <div className="swiper-button-next slider-arrow">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </div>
+            </div> */}
           </Swiper>
         </div>
     )

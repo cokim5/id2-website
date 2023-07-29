@@ -42,6 +42,31 @@
     align-items: center;
     justify-content: center;
     display: flex;
+    position: relative;
 }
+
+.sliderController {
+    margin-top: -200px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background, adjust the opacity as needed */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially, hide the overlay */
+    transition: opacity 0.3s;
+  }
+  
+  /* Show the overlay on hover */
+  .swiper_slide:hover .overlay {
+    opacity: 1;
+  }
 
 
