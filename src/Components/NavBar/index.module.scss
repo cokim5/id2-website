@@ -3,11 +3,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: white;
+    background-color: transparent;
+    color: transparent;
     padding-left: 4vw;
     padding-right: 4vw;
     padding-top: 4vh;
     font-family: system-ui;
+    z-index: 9999999999999999;
+    
   
     @media (max-width: 768px) {
       .navRight {

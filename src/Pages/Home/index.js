@@ -17,6 +17,7 @@ import styles from './index.module.scss'
 function index() {
     return (
         <div className={styles.wrapper}>
+            
           <Swiper
             effect={'coverflow'}
             grabCursor={true}
