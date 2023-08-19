@@ -1,0 +1,110 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    /* Enable horizontal snap scrolling */
+    /* Add padding to account for margin */
+    justify-content: flex-start;
+    scroll-padding-left: 15vw;
+    scroll-padding-right: 15vw;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+  }
+
+.mobileItem {
+    border: 1px solid black;
+    min-width: 60vw;
+    /* Use min-width to allow items to grow */
+    max-width: 60vw;
+    height: 80vh;
+    scroll-snap-align: start;
+    /* Snap items to the start of the container */
+    margin-right: 1vw;
+    margin-left: 1vw;
+    /* Add some spacing between the items */
+    display: flex;
+    flex-direction: row;
+    /* Stack text and image horizontally */
+    justify-content: center;
+    /* Vertically center content */
+    align-items: center;
+    /* Horizontally center content */
+    position: relative;
+    /* Needed for absolute positioning of the text */
+}
+
+.desktopItem {
+    border: 1px solid black;
+    min-width: 70vw;
+    /* Use min-width to allow items to grow */
+    max-width: 70vw;
+    height: 80vh;
+    scroll-snap-align: start;
+    /* Snap items to the start of the container */
+    margin-right: 1vw;
+    margin-left: 1vw;
+    /* Add some spacing between the items */
+    display: flex;
+    flex-direction: row;
+    /* Stack text and image horizontally */
+    justify-content: center;
+    /* Vertically center content */
+    align-items: center;
+    /* Horizontally center content */
+    position: relative;
+    /* Needed for absolute positioning of the text */
+}
+
+
+
+.mobileImage {
+    max-height: 70vh;
+    // width: auto;
+    max-width: 50vw;
+    aspect-ratio: 1 / 2.03;
+    transition: transform 1s ease, translateX 1s ease;
+    cursor: url('../../assets/cursor.png'), pointer;
+}
+
+.desktopImage {
+    max-height: 60vh;
+    // width: auto;
+    max-width: 50vw;
+    aspect-ratio: 2 / 1.16;
+    transition: transform 1s ease, translateX 1s ease;
+    cursor: url('../../assets/cursor.png'), pointer;
+}
+
+
+.visibleText {
+    position: absolute;
+    bottom: 40vh;
+    right: 10vw;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    text-align: center;
+    transition: opacity 1s ease, transform 1s ease; /* Add transition for opacity and transform */
+    opacity: 1;
+    transform: translateY(-20px); /* Move the text downward initially */
+    display: block;
+}
+
+.hiddenText {
+    position: absolute;
+    bottom: 40vh;
+    right: 10vw;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    text-align: center;
+    transition: opacity 1s ease, transform 1s ease; /* Add transition for opacity and transform */
+    display: block;
+    opacity: 0;
+    transform: translateY(0px); /* Move the text downward initially */
+}
