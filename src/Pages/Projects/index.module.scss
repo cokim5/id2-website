@@ -1,0 +1,60 @@
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+  color: yellow;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  margin-top: 10%;
+  padding: 0;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.pinBox {
+  background-color: plum;
+  position: relative;
+  padding: 40px;
+  overflow: hidden;
+  height: 100vh;
+  width: auto;
+}
+
+.pinSlider {
+  transform: translateY(calc(30%));
+  position: relative;
+  display: block;
+  overflow: hidden;
+  display: flex;
+
+  height: 50vh;
+  margin: 0 2rem;
+  background: blue;
+}
+.content,
+.content1,
+.content2,
+.content3 {
+  transform: translateY(50%);
+  position: absolute;
+  max-width: 100%;
+  height: 100%;
+  z-index: 200;
+  color: white;
+  z-index: 99;
+}
+
+.inner {
+  position: relative;
+  margin: 0 auto;
+  max-width: 60%;
+  overflow: hidden;
+  padding-top: 50px;
+}
