@@ -1,16 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './index.module.scss';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isNavBarFixed, setIsNavBarFixed] = useState(false); // New state
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsNavBarFixed(true);
+      } else {
+        setIsNavBarFixed(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); 
+
   return (
-    <nav className={styles.navBar}>
+    <nav className={`${styles.navBar} ${isNavBarFixed ? styles.fixed : ''}`}>
       <div className={styles.navLeft}>
         <Link to="/" className={styles.link} onClick={() => setIsMenuOpen(false)}>
           id2

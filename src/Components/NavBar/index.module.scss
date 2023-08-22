@@ -5,11 +5,13 @@
     padding: 10px;
     background-color: transparent;
     color: transparent;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    padding-top: 4vh;
+    // padding-left: 4vw;
     font-family: system-ui;
     z-index: 999;
+    position: fixed;
+    width: 98vw;
+    top: 0;
+    height: 6vh;
     
   
     @media (max-width: 768px) {

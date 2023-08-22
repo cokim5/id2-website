@@ -1,0 +1,59 @@
+.welcomeContainer {
+    display: flex;
+    flex-direction: row;
+    // border: 1px solid red;
+
+    .crewLogo {
+        max-width: 30vw;
+        margin-left: 8vw;
+        position: fixed;
+        top: 0;
+        // border: 1px solid greenyellow;
+
+    }
+
+    @keyframes fadeUpAnimation {
+        from {
+            opacity: 0;
+            transform: translateY(25%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .welcomeText {
+        font-family: 'Times New Roman';
+        width: 60vw;
+        text-align: right;
+        font-size: 2vw;
+        height: 65vh;
+        top: 0vh;
+        // border: 1px solid blue;
+        position: fixed;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        animation: fadeUpAnimation 2s ease forwards;
+    }
+    
+
+    .screenContainer {
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 5vw;
+        height: 100vh;
+        align-items: flex-end;
+        // border: 1px solid black;
+
+        .crewWelcomeScreen {
+            display: flex;
+            max-height: 70vh;
+            max-width: 50vw;
+            aspect-ratio: 1 / 2.03;
+            margin-bottom: -10vh;
+        }        
+    }   
+}
