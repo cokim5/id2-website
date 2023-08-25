@@ -91,45 +91,43 @@ const InfoSlides = () => {
                     scrub: true,
                     pin: true,
                     start: "top top",
-                    end: "+=3000 bottom",
+                    end: () => `+=${5 * window.innerHeight}px`,
+                }
+            });
+
+            let imageTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: pinSlider.current,
+                    scrub: true,
+                    start: "top top",
+                    end: () => `+=${5 * window.innerHeight}px`,
                 }
             });
 
             contents.forEach((content, index) => {
                 tl.to(content, {
-                    keyframes: { y: ['50vh', '30vh', '30vh', '30vh', '30vh', '0vh'], opacity: [0, 0.5, 1, 1, 0.5, 0], },
-                    duration: 2,
+                    keyframes: { y: ['40vh', '30vh', '30vh', '30vh', '30vh', '20vh'], opacity: [0, 1, 1, 1, 1, 0], },
+                    duration: 5,
                     autoAlpha: 1,
                 });
-
-                // Create a new timeline for each image
-                let imageTl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: pinSlider.current,
-                        scrub: true,
-                        start: "top top",
-                        end: "+=3000 bottom",
-                    }
-                });
-
-                // Animate the image along with the content text
+                
                 if (index === 0) {
-                    gsap.set(image1.current, {opacity: 1});
                     imageTl.to(image1.current, {
-                        keyframes: { y: ['80vh', '50vh', '-30vh', '-90vh', '-90vh', '-90vh'], opacity: 1 },
-                        opacity: 1,
-                        duration: 2,
+                        keyframes: { y: ['100vh', '00vh', '-30vh', '-30vh', '-60vh', '-160vh'], opacity: [1, 1, 1, 1, 1, 1] },
+                        duration: 5,
                         autoAlpha: 1,
+                        opacity: 1,
                     });
                 } else if (index === 1) {
-                    gsap.set(image2.current, {opacity: 1});
                     imageTl.to(image2.current, {
-                        keyframes: { y: ['70vh', '60vh', '50vh', '50vh', '-40vh', '-30vh'], opacity: 1 },
-                        duration: 2,
+                        keyframes: { y: ['100vh', '00vh', '-30vh', '-30vh', '-60vh', '-250vh'], opacity: [1, 1, 1, 1, 1, 1] },
+                        duration: 5,
                         autoAlpha: 1,
+                        opacity: 1,
                     });
                 }
             });
+
 
         }, component);
         return () => ctx.revert();
@@ -155,8 +153,9 @@ const InfoSlides = () => {
                     </div>
                 </div>
             </div>
-            <div className="intro" style={{ height: "100vh", background: "#396195" }}>
-                <h1>End</h1>
+            <div className="intro" >
+                <img src={require('../../../assets/appstoreIcon.png')} alt="App store" className="appstoreIcon" />
+                <h1>Visit CREW!</h1>
             </div>
         </div>
     )
