@@ -11,10 +11,26 @@ const Projects = () => {
   const pinSlider = useRef();
   const content1 = useRef();
   const content2 = useRef();
-  const image1 = useRef(); // Reference to the first image element
-  const image2 = useRef(); // Reference to the second image element
+  const image1 = useRef(); 
+  const image2 = useRef(); 
 
   const tl = useRef();
+
+  useEffect(() => {
+    const marquee2Element = document.querySelector(`.${styles.marquee2}`);
+    if (marquee2Element) {
+      marquee2Element.style.opacity = 0;
+      setTimeout(() => {
+        marquee2Element.style.opacity = 1;
+      }, 10000); 
+    }
+    
+    document.body.style.overflowX = 'hidden';
+
+    return () => {
+      document.body.style.overflowX = 'auto';
+    };
+  }, []);
 
   useEffect(() => {
     let ctx = gsap.context(() => {

@@ -3,6 +3,7 @@
   padding: 0;
   font-family: sans-serif;
   text-align: center;
+  overflow-x: hidden;
 
   .pinBox {
     position: relative;
@@ -124,16 +125,12 @@
     margin-top: 5vh;
     display: flex;
     align-items: center;
-    border: 10px solid red;
+    overflow-x: hidden;
 
     .marquee {
-      overflow: hidden;
       position: absolute;
       white-space: nowrap;
       animation: marquee 20s linear infinite;
-      width: 100%;
-      overflow: hidden;
-      border: 10px solid yellow;
     }
 
     .marquee span {
