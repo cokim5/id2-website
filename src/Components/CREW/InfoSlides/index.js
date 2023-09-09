@@ -3,72 +3,8 @@ import styles from './index.module.scss';
 import React, { useEffect, useState, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import jericho1 from '../../../assets/jericho.png';
-import jericho2 from '../../../assets/jericho.png';
-import './styles.css'
-import { isVisible } from '@testing-library/user-event/dist/utils';
 
 gsap.registerPlugin(ScrollTrigger);
-
-// const InfoSlides = () => {
-//     const component = useRef();
-//     const pinSlider = useRef();
-//     const content1 = useRef();
-//     const content2 = useRef();
-
-//     const tl = useRef();
-
-//     useEffect(() => {
-//         let ctx = gsap.context(() => {
-//             let contents = gsap.utils.toArray(".content");
-//             gsap.set(contents, { autoAlpha: 0, y: 40 });
-
-//             let tl = gsap.timeline({
-//                 scrollTrigger: {
-//                     trigger: pinSlider.current,
-//                     scrub: true,
-//                     pin: true,
-//                     start: "top top",
-//                     end: "+=3000 bottom",
-//                 }
-//             });
-
-//             contents.forEach((content) => {
-//                 tl.to(content, {
-//                     keyframes: { y: ['40vh', '20vh', '20vh', '20vh', '20vh', '0vh'], opacity: [0, 0.5, 1, 1, 0.5, 0], },
-//                     duration: 2,
-//                     autoAlpha: 1,
-//                 });
-//             });
-//         }, component);
-//         return () => ctx.revert();
-//     }, []);
-
-//     return (
-//         <div className="App" ref={component}>
-//             <div className="pinBox" ref={pinSlider} >
-//                 <div className={"pinSlider"}>
-//                     <div className="content" ref={content1}>
-//                         <p>this is the first info</p>
-//                     </div>
-
-//                     <div className="content" ref={content2}>
-//                         <p>this is the second info</p>
-//                     </div>
-//                 </div>
-//             </div>
-//             <div className="intro" style={{ height: "100vh", background: "#396195" }}>
-//                 <h1>End</h1>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default InfoSlides;
-
-
-
-
 
 const InfoSlides = () => {
     const component = useRef();
@@ -82,7 +18,7 @@ const InfoSlides = () => {
 
     useEffect(() => {
         let ctx = gsap.context(() => {
-            let contents = gsap.utils.toArray(".content");
+            let contents = gsap.utils.toArray(`.${styles.content}`);
             gsap.set(contents, { autoAlpha: 0, y: 0 });
 
             let tl = gsap.timeline({
@@ -134,27 +70,27 @@ const InfoSlides = () => {
     }, []);
 
     return (
-        <div className="App" ref={component}>
-            <div className="pinBox" ref={pinSlider} >
-                <div className={"pinSlider"}>
-                    <div className="content" ref={content1}>
+        <div className={styles.container} ref={component}>
+            <div className={styles.pinBox} ref={pinSlider} >
+                <div className={styles.pinSlider}>
+                    <div className={styles.content} ref={content1}>
                         <p>this is the first info</p>
-                        <div className="image" ref={image1}>
-                            <img src={require('../../../assets/crew.png')} alt="Image 1" className="screenshot" />
+                        <div ref={image1}>
+                            <img src={require('../../../assets/crew.png')} alt="Image 1" className={styles.screenshot} />
                         </div>
                     </div>
 
-                    <div className="content" ref={content2}>
+                    <div className={styles.content} ref={content2}>
                         <p>this is the second info</p>
-                        <div className="image" ref={image2}>
+                        <div ref={image2}>
 
-                            <img src={require('../../../assets/crew.png')} alt="Image 1" className="screenshot" />
+                            <img src={require('../../../assets/crew.png')} alt="Image 1" className={styles.screenshot} />
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="intro" >
-                <img src={require('../../../assets/appstoreIcon.png')} alt="App store" className="appstoreIcon" />
+            <div className={styles.intro} >
+                <img src={require('../../../assets/appstoreIcon.png')} alt="App store" className={styles.appstoreIcon} />
                 <h1>Visit CREW!</h1>
             </div>
         </div>

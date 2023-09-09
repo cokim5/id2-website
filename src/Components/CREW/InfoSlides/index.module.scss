@@ -1,156 +1,69 @@
-// .firstSlide {
-//     border: 1px solid black;
-//     height: 100vh;
-//     display: flex;
-//     margin-top: 60vh;
-
-//     .screenContainer {
-//         border: 1px solid blue;
-//         width: 30vw;
-//     }
-
-//     .textContainer {
-//         margin-left: 8vw;
-//         margin-top: 12vh;
-//         width: 58vw;
-//         height: 58vw;
-//         border-radius: 100vw;
-//         font-size: 2vw;
-//         font-family: 'Times New Roman';
-//         background-color: #FFD73F;
-//         position: relative;
-//         top: 0;
-//         display: flex;
-//         align-items: flex-start;
-//         justify-content: center;
-
-//         .pinSlider {
-//             position: relative;
-//             display: block;
-//             /* overflow: hidden; */
-//             display: flex;
-//             object-fit: contain;
-
-//             .content {
-//                 position: absolute;
-//                 max-width: 100%;
-//                 height: 100%;
-//             }
-//         }
-//     }
-// }
-
-
-
-
-
-
-// .container {
-//     margin-top: 60vh;
-//     border: 10px solid black;
-// }
-
-// .pinBox {
-//   color: #396195;
-//   position: relative;
-//   width: 100vw;
-//   height: 100vh;
-
-//   border: 10px solid red;
-// }
-
-// .pinSlider {
-//   position: relative;
-//   display: block;
-//   border: 10px solid red;
-
-
-// }
-// .content {
-//   position: absolute;
-//   max-width: 100%;
-//   height: 100%;
-//   background-color: #396195;
-//   border: 1px solid red;
-
-// }
-h1,
-h2 {
-  padding: 0;
+.container {
   margin: 0;
-  color: white;
-}
-
-.intro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.App {
-  margin-top: 60vh;
   padding: 0;
   font-family: sans-serif;
   text-align: center;
-}
 
-.pinBox {
-  color: "#396195";
-  position: relative;
-  padding: 40px;
-  overflow: hidden;
-  width: auto;
-  height: 100vh;
-  /* width: 68%; /* Adjust as needed */
-  /* height: 80%;
-  margin-left: 20%;  */
-  /* height: 50%; Adjust as needed */
-  /* top: 50%;
-  left: 50%; */
-}
+  .pinBox {
+    color: "#396195";
+    position: relative;
+    padding: 40px;
+    width: auto;
+    height: 100vh;
 
-.pinSlider {
-  position: relative;
-  display: block;
-  /* overflow: hidden; */
-  display: flex;
-  object-fit: contain;
-  z-index: -9999999;
-  height: 82vh;
-  width: 65vw;
-  margin-left: 34.5vw;
-  margin-top: 13.8vh;
-  /* margin: 0 2rem; */
-  background: url('../../../assets/jericho.png') center/cover no-repeat;
+    .pinSlider {
+      position: relative;
+      margin-left: 35vw;
+      margin-top: 10vh;
+      height: 58vw;
+      width: 58vw;
+      border-radius: 100vw;
+      background-color: #FFD73F;
 
-}
-.content,
-.content1,
-.content2,
-.content3 {
-  /* transform: translateY(50%); */
-  position: absolute;
-  max-width: 100%;
-  height: 100%;
-  /* z-index: 200; */
-  background-color: "#396195";
-  z-index: 99;
+      .content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
 
+
+        .screenshot {
+          position: absolute;
+          right: 48vw;
+          width: 20vw;
+        }
+      }
+
+      .content p {
+        font-size: 2vw;
+        font-family: 'Times New Roman';
+      }
+    }
+  }
+
+
+  .intro {
+    height: 100vh;
+    background-color: transparent;
+    // border: 1px solid black;
+    margin-top: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .appstoreIcon {
+      width: 10vw;
+      margin-right: 2vw;
+    }  
+  }
+  
+  .intro h1 {
+    color: black;
+    font-family: 'Times New Roman';
+  }
   
 }
 
-.content img {
-    margin-top: 43.2%;
-    margin-left: 16%;
-    width: 101%;
-    height: 78.1%;
-    object-fit: cover;
-}
 
-.inner {
-  position: relative;
-  margin: 0 auto;
-  max-width: 60%;
-  overflow: hidden;
-  padding-top: 50px;
-}
+
