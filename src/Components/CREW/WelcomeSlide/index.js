@@ -40,7 +40,7 @@ const WelcomeSlide = () => {
                 </div>
                 <div className={styles.screenContainer}>
                     <img
-                        src={require('../../../assets/crew.png')}
+                        src={require('../../../assets/crew2.png')}
                         className={styles.crewWelcomeScreen}
                     />
                 </div>

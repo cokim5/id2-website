@@ -28,42 +28,170 @@
         justify-content: center;
 
 
+
         .screenshot {
           position: absolute;
-          right: 48vw;
+          right: 40vw;
           width: 20vw;
         }
+
+        .content1p1 {
+          font-size: 2vw;
+          font-family: 'Times New Roman';
+          width: 50%;
+          position: absolute;
+          top: -25vh;
+        }
+
+        .content1p2 {
+          font-size: 2vw;
+          font-family: 'Times New Roman';
+          width: 60%;
+          position: absolute;
+          top: -20vh;
+
+        }
+
+        .content1p3 {
+          font-size: 2vw;
+          font-family: 'Times New Roman';
+          width: 70%;
+          position: absolute;
+          top: -15vh;
+
+        }
+
+        .content1p4 {
+          font-size: 2vw;
+          font-family: 'Times New Roman';
+          width: 75%;
+          position: absolute;
+          top: -10vh;
+          text-align: left;
+        }
+
+        .content2p4 {
+          font-size: 2vw;
+          font-family: 'Times New Roman';
+          width: 71%;
+          position: absolute;
+          top: -10vh;
+          text-align: left;
+        }
+
+        .content1p5 {
+          font-size: 2vw;
+          font-family: 'Times New Roman';
+          width: 85%;
+          position: absolute;
+          top: 0vh;
+
+        }
+
+        .content1p6 {
+          font-size: 2vw;
+          font-family: 'Times New Roman';
+          width: 91%;
+          position: absolute;
+          top: 5vh;
+
+        }
+
+        .content1p7 {
+          font-size: 2vw;
+          font-family: 'Times New Roman';
+          width: 96%;
+          position: absolute;
+          top: 10vh;
+        }
+
+        .content1p8 {
+          font-size: 2vw;
+          font-family: 'Times New Roman';
+          width: 95%;
+          position: absolute;
+          top: 15vh;
+          text-align: left;
+        }
+
+        .content2p7 {
+          font-size: 2vw;
+          font-family: 'Times New Roman';
+          width: 90%;
+          position: absolute;
+          top: 10vh;
+          text-align: left;
+        }
+
+        .content2p8 {
+          font-size: 2vw;
+          font-family: 'Times New Roman';
+          width: 90%;
+          position: absolute;
+          top: 40vh;
+          text-align: center;
+        }
+
       }
 
-      .content p {
-        font-size: 2vw;
-        font-family: 'Times New Roman';
-      }
+
     }
   }
 
 
-  .intro {
+  .conclusionContainer {
     height: 100vh;
     background-color: transparent;
-    // border: 1px solid black;
     margin-top: 25vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+
+    .viewResultsContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 12vw;
+      padding-right: 2vw;
+
+      .video {
+        max-height: 80vh;
+
+      }
+    }
+
+    .visitCrewContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .link {
+        text-decoration: none;
+        color: inherit;
+        font-weight: normal;
+
+        .clickableArea {
+          display: flex;
+          justify-content: center;
+          align-items: center;
   
-    .appstoreIcon {
-      width: 10vw;
-      margin-right: 2vw;
-    }  
+          .appstoreIcon {
+            width: 10vw;
+            margin-right: 2vw;
+          }
+        }
+      }
+      
+
+      
+    }
+
+
   }
-  
+
   .intro h1 {
     color: black;
     font-family: 'Times New Roman';
   }
-  
+
 }
-
-
-
