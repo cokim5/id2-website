@@ -99,7 +99,7 @@ const Projects = () => {
               <img src={require('../../assets/jerichoScreenShot2.png')} />
               <div ref={image1} className={styles.caption}>
                 <h1>01</h1>
-                <p>Clean Homepage</p>
+                <p>Frictionless UI</p>
               </div>
             </div>
 

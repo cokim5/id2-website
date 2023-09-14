@@ -1,72 +1,240 @@
+// .swiper_container {
+//   width: 100%;
+//   padding: 2rem 0;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .img {
+//   width: calc(100%);
+//   aspect-ratio: 1 / 1;
+//   object-fit: contain;
+//   border-radius: 10px;
+//   align-items: center;
+//   transition: transform 0.3s;
+
+//   &:hover {
+//     cursor: pointer;
+//     transform: scale(1.1);
+//   }
+// }
+
+// .imgComputer {
+//   width: calc(100%/0.7);
+//   aspect-ratio: 1 / 1;
+//   object-fit: contain;
+//   border-radius: 10px;
+//   align-items: center;
+//   transition: transform 0.3s;
+//   margin-top: -110px;
+
+//   &:hover {
+//     cursor: pointer;
+//     transform: scale(1.1);
+//   }
+// }
+
+// .swiper_slide {
+//   width: 40%;
+//   align-items: center;
+//   justify-content: center;
+//   display: flex;
+//   position: relative;
+// }
+
+// .sliderController {
+//   margin-top: -200px;
+// }
+
+// .overlay {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.7);
+//   /* Semi-transparent background, adjust the opacity as needed */
+//   color: white;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   opacity: 0;
+//   /* Initially, hide the overlay */
+//   transition: opacity 0.3s;
+// }
+
+// /* Show the overlay on hover */
+// .swiper_slide:hover .overlay {
+//   opacity: 1;
+// }
 
 
-.swiper_container {
-    width: 100%;
-    padding: 2rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
-.img {
-    width: calc(100%);
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
-    border-radius: 10px;
-    align-items: center;
-    transition: transform 0.3s;
+.introSlide {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #5C4033;
 
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-    }
-}
-
-.imgComputer {
-    width: calc(100%/0.7);
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
-    border-radius: 10px;
-    align-items: center;
-    transition: transform 0.3s;
-    margin-top: -110px;
-
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-    }
-}
-
-.swiper_slide {
-    width:40%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    position: relative;
-}
-
-.sliderController {
-    margin-top: -200px;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background, adjust the opacity as needed */
+  .h1Letter1 {
     color: white;
+    font-size: 10vw;
+    position: fixed;
+    left: 23vw;
+    top: 30vh;
+  }
+
+  .h1Letter2 {
+    color: white;
+    font-size: 10vw;
+    position: fixed;
+    left: 30vw;
+    top: 30vh;
+  }
+
+  .h1Letter3 {
+    color: white;
+    font-size: 10vw;
+    position: fixed;
+    left: 37vw;
+    top: 30vh;
+  }
+
+  .h1Letter4 {
+    color: white;
+    font-size: 10vw;
+    position: fixed;
+    left: 44vw;
+    top: 30vh;
+  }
+
+  .h1Letter5 {
+    color: white;
+    font-size: 10vw;
+    position: fixed;
+    left: 54vw;
+    top: 30vh;
+  }
+
+  .h1Letter6 {
+    color: white;
+    font-size: 10vw;
+    position: fixed;
+    left: 62vw;
+    top: 30vh;
+  }
+
+  .h1Letter7 {
+    color: white;
+    font-size: 10vw;
+    position: fixed;
+    left: 70vw;
+    top: 30vh;
+  }
+
+  .h4Letter1 {
+    color: #C3A699;
+    font-size: 3vw;
+    position: fixed;
+    margin-top: 12vh;
+    z-index: 0;
+  }
+}
+
+.introSlideBuffer {
+  width: 100vw;
+  height: 200vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #5C4033;
+}
+
+
+.tableOfContentsSlide {
+  scroll-snap-align: start;
+  height: 100vh;
+  background-color: #ECDCD1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+
+  .logo {
+    z-index: 1;
+    width: 20vw;
+  }
+
+  .menuContainer {
+    position: absolute;
+    height: 20vw;
+    width: 20vw;
+    z-index: 1;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    opacity: 0; /* Initially, hide the overlay */
-    transition: opacity 0.3s;
+    right: 20vw;
   }
+
+  .menuContainer p {
+    z-index: 1;
+    color: #C3A699;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 2vw;
+    margin: 3px;
+    transition: color 0.8s;
+  }
+
+  .menuContainer p:hover {
+    transition: color 0.8s;
+    color: #785444;
+    cursor: pointer;
+  }
+
+  .menuContainer.fixed {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: top 1s;
+  }
+
   
-  /* Show the overlay on hover */
-  .swiper_slide:hover .overlay {
-    opacity: 1;
-  }
+}
 
+.whatIsContainer {
+  scroll-snap-align: start;
+  height: 100vh;
+  width: 100vw;
+  background-color: #ECDCD1;
+  border: 1px solid green;
+}
 
+.ourVisionContainer {
+  scroll-snap-align: start;
+  height: 100vh;
+  width: 100vw;
+  background-color: #ECDCD1;
+  border: 1px solid yellow;
+}
+
+.keyFeaturesContainer {
+  scroll-snap-align: start;
+  height: 100vh;
+  width: 100vw;
+  background-color: #ECDCD1;
+  border: 1px solid red;
+}
+
+.visitContainer {
+  scroll-snap-align: start;
+  height: 100vh;
+  width: 100vw;
+  background-color: #ECDCD1;
+  border: 1px solid blue;
+}
