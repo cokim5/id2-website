@@ -6,6 +6,29 @@ const Home = () => {
   const [isMenuFixed, setIsMenuFixed] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
 
+  const items = [
+    { text: "log your devotionals", image: require('../../assets/redwood5.png') },
+    { text: "look back on your entry", image: require('../../assets/redwood6.png') },
+    { text: "add friends", image: require('../../assets/redwood3.png') },
+    { text: "join & create groups", image: require('../../assets/redwood1.png') },
+    { text: "search/organize your entries", image: require('../../assets/redwood4.png') },
+    { text: "view your friends posts", image: require('../../assets/redwood2.png') },
+  ]
+
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleScrollLeft = () => {
+    if (scrollLeft > 1) {
+      setScrollLeft(scrollLeft - 2);
+    }
+  };
+
+  const handleScrollRight = () => {
+    if (scrollLeft < 3) {
+      setScrollLeft(scrollLeft + 2);
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -51,22 +74,17 @@ const Home = () => {
   }, [scrollPercentage]);
 
   useEffect(() => {
-    // Get all the menu items by their data-target attribute
     const menuItems = document.querySelectorAll('[data-target]');
 
-    // Add click event listeners to each menu item
     menuItems.forEach((menuItem) => {
       menuItem.addEventListener('click', () => {
-        // Get the target section's ID from the data-target attribute
         const targetId = menuItem.getAttribute('data-target');
         const targetSection = document.getElementById(targetId);
 
-        // Scroll to the target section smoothly
         targetSection.scrollIntoView({ behavior: 'smooth' });
       });
     });
 
-    // Clean up the event listeners when the component unmounts
     return () => {
       menuItems.forEach((menuItem) => {
         menuItem.removeEventListener('click', () => { });
@@ -94,16 +112,16 @@ const Home = () => {
         <img src={require('../../assets/redwood_logo.png')} className={styles.logo} />
         <div className={`${styles.menuContainer} ${isMenuFixed ? styles.fixed : ''}`} style={{
           right: `${scrollPercentage < 123.4
-              ? '20'
-              : scrollPercentage > 143.8
-                ? '2'
-                : 20 - (scrollPercentage - 123.4) * ((20 - 2) / (143.8 - 123.4))
+            ? '20'
+            : scrollPercentage > 143.8
+              ? '2'
+              : 20 - (scrollPercentage - 123.4) * ((20 - 2) / (143.8 - 123.4))
             }vw`
         }}>
-          <p data-target="whatIsContainer"  style={{ color: activeSection === 'whatIsContainer' ? '#785444' : '#C3A699' }}>what is redwood</p>
-          <p data-target="ourVisionContainer" style={{ color: activeSection === 'ourVisionContainer' ? '#785444' : '#C3A699' }}>our vision</p>
-          <p data-target="keyFeaturesContainer" style={{ color: activeSection === 'keyFeaturesContainer' ? '#785444' : '#C3A699' }}>key features</p>
-          <p data-target="visitContainer" style={{ color: activeSection === 'visitContainer' ? '#785444' : '#C3A699' }}>visit redwood</p>
+          <p data-target="whatIsContainer" className={activeSection === 'whatIsContainer' ? styles.active : ''}>what is redwood</p>
+          <p data-target="ourVisionContainer" className={activeSection === 'ourVisionContainer' ? styles.active : ''}>our vision</p>
+          <p data-target="keyFeaturesContainer" className={activeSection === 'keyFeaturesContainer' ? styles.active : ''}>key features</p>
+          <p data-target="visitContainer" className={activeSection === 'visitContainer' ? styles.active : ''}>visit redwood</p>
         </div>
       </div>
 
@@ -111,16 +129,41 @@ const Home = () => {
 
 
       <div id="whatIsContainer" className={styles.whatIsContainer}>
-        what is
+        <p className={styles.whatIsText}>A devotional journaling platform that fosters a sense of togetherness and growth in faith and community, bringing believers and non-believers alike closer together.</p>
       </div>
       <div id="ourVisionContainer" className={styles.ourVisionContainer}>
-        our vision
+        <p className={styles.ourVisionText}>To <em className={styles.highlighted}>foster</em> communities that <em className={styles.highlighted}>thrive</em> not because of individual merit but through <em className={styles.highlighted}>support, care, and love.</em><br /> <br />
+          For groups or communities that want to create a supportive space and grow together in their walk with God</p>
       </div>
       <div id="keyFeaturesContainer" className={styles.keyFeaturesContainer}>
-        key features
+        
+        <div className={styles.carouselContainer}>
+        <img src={require('../../assets/chevron-down-brown.png')} className={styles.buttonLeft} onClick={() => handleScrollLeft()} style={{opacity: `${scrollLeft != 0 ? 1 : 0}`}}/>
+          <div className={styles.carouselWrapper} >
+            {items.map((item, index) => (
+              <div key={index} className={styles.carouselItem} style={{transform: `translateX(${scrollLeft * -100}%)`}}>
+                <img src={item.image} className={styles.carouselImage} />
+                <p className={styles.carouselCaption}>{item.text}</p>
+              </div>
+            ))}
+          </div>
+          <img src={require('../../assets/chevron-down-brown.png')} className={styles.buttonRight} onClick={() =>handleScrollRight()} style={{opacity: `${scrollLeft != 4 ? 1 : 0}`}}/>
+        </div>
       </div>
       <div id="visitContainer" className={styles.visitContainer}>
-        visit
+        <p className={styles.visitText}>
+          <span>c</span>
+          <span>o</span>
+          <span>m</span>
+          <span>i</span>
+          <span>n</span>
+          <span>g</span>
+          <span>&nbsp;&nbsp;&nbsp;</span>
+          <span>s</span>
+          <span>o</span>
+          <span>o</span>
+          <span>n</span>
+        </p>
       </div>
 
 

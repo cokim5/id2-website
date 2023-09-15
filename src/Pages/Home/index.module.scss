@@ -163,7 +163,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
 
   .logo {
     z-index: 1;
@@ -179,6 +178,10 @@
     flex-direction: column;
     justify-content: center;
     right: 20vw;
+
+    .active {
+      color: #785444 !important;
+    }
   }
 
   .menuContainer p {
@@ -197,6 +200,8 @@
     cursor: pointer;
   }
 
+
+
   .menuContainer.fixed {
     position: fixed;
     top: 50%;
@@ -204,7 +209,7 @@
     transition: top 1s;
   }
 
-  
+
 }
 
 .whatIsContainer {
@@ -212,7 +217,21 @@
   height: 100vh;
   width: 100vw;
   background-color: #ECDCD1;
-  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+
+  .whatIsText {
+    z-index: 1;
+    height: 30vh;
+    width: 60vw;
+    margin-right: 20vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #785444;
+    font-size: 2.5vw;
+    font-weight: 500
+  }
 }
 
 .ourVisionContainer {
@@ -220,7 +239,25 @@
   height: 100vh;
   width: 100vw;
   background-color: #ECDCD1;
-  border: 1px solid yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+
+  .ourVisionText {
+    z-index: 1;
+    height: 40vh;
+    width: 60vw;
+    margin-right: 20vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #785444;
+    font-size: 2.5vw;
+    font-weight: 500;
+
+    .highlighted {
+      color: #C3A699;
+    }
+  }
 }
 
 .keyFeaturesContainer {
@@ -228,7 +265,82 @@
   height: 100vh;
   width: 100vw;
   background-color: #ECDCD1;
-  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .carouselContainer {
+    z-index: 1;
+    width: 60vw;
+    height: 85vh;
+    margin-right: 20vw;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: hidden;
+    flex-direction: row;
+
+    .buttonLeft {
+      width: 5%;
+      transition: all 0.8s ease;
+      z-index: 100;
+    }
+
+    .buttonLeft:hover {
+      -webkit-filter: brightness(50%);
+      transition: all 0.8s ease;
+    }
+
+    .buttonRight {
+      width: 5%;
+      transform: rotate(180deg);      
+      transition: all 0.8s ease;
+      z-index: 100;
+    }
+
+    .buttonRight:hover {
+      -webkit-filter: brightness(50%);
+      transition: all 0.8s ease;
+    }
+
+    .carouselWrapper {
+      display: flex;
+      height: 100%;
+      width: 70vw;
+      overflow: hidden;
+      // border: 10px solid green;
+
+
+      .carouselItem {
+        display: flex;
+        flex: 0 0 50%;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        transition: transform 1s ease;
+
+        .carouselImage {
+          width: 100%;
+          height: 90%;
+          object-fit: contain;
+        }
+
+        .carouselCaption {
+          width: 90%;
+          height: 10%;
+          align-self: center;
+          text-align: center;
+          color: #785444;
+          font-size: 1vw;
+          font-weight: 500;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+      }
+    }
+  }
 }
 
 .visitContainer {
@@ -236,5 +348,127 @@
   height: 100vh;
   width: 100vw;
   background-color: #ECDCD1;
-  border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+
+  .visitText {
+    z-index: 1;
+    height: 20vh;
+    width: 16vw;
+    margin-right: 20vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #145C1A;
+    font-size: 2.5vw;
+    font-weight: 500;
+    display: inline-block;
+  }
+
+  .visitText span {
+    display: inline-block;
+    opacity: 0;
+    /* Start with letters hidden */
+    animation: fadeInUp 5s ease-in-out infinite;
+  }
+
+  .visitText span:nth-child(1) {
+    animation-delay: 0.3s;
+  }
+
+  .visitText span:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+
+  .visitText span:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+
+  .visitText span:nth-child(4) {
+    animation-delay: 1.2s;
+  }
+
+  .visitText span:nth-child(5) {
+    animation-delay: 1.5s;
+  }
+
+  .visitText span:nth-child(6) {
+    animation-delay: 1.8s;
+  }
+
+  .visitText span:nth-child(7) {
+    animation-delay: 2.1s;
+  }
+
+  .visitText span:nth-child(8) {
+    animation-delay: 2.4s;
+  }
+
+  .visitText span:nth-child(9) {
+    animation-delay: 2.7s;
+  }
+
+  .visitText span:nth-child(10) {
+    animation-delay: 3.0s;
+  }
+
+  .visitText span:nth-child(11) {
+    animation-delay: 3.3s;
+  }
+
+  // /* Add a delay before fading out each letter */
+  // .visitText span:nth-child(1):nth-child(4n+1) {
+  //   animation-name: fadeOutDown;
+  //   animation-delay: 1s; /* Wait for 1 second before fading out */
+  // }
+
+  // /* Add a delay before fading in each letter again */
+  // .visitText span:nth-child(4n+4) {
+  //   animation-name: fadeInUp;
+  //   animation-delay: 2s; /* Wait for 2 seconds before fading in */
+  // }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(10%);
+    }
+
+    25% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    75% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(10%);
+    }
+  }
+
+  @keyframes fadeOutDown {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+
+    25% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    75% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(10%);
+    }
+  }
 }
