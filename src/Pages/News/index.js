@@ -1,17 +1,12 @@
 
-import styles from './index.module.scss';
-import React, { useEffect, useState } from 'react';
-import WelcomeSlide from '../../Components/CREW/WelcomeSlide';
-import InfoSlides from '../../Components/CREW/InfoSlides';
-
+import React from 'react';
+import styles from './index.module.scss'
 
 const News = () => {
 
     return (
-        <div>
-            <WelcomeSlide />
-
-            <InfoSlides />
+        <div className={styles.container}>
+            coming soon...
         </div>
     )
 }

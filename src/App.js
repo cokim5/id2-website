@@ -8,6 +8,7 @@ import Contact from './Pages/Contact';
 import News from './Pages/News';
 import Redwood from './Pages/Redwood';
 import Crew from './Pages/Crew';
+import Jericho from './Pages/Jericho';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/news' element={<News />} />
         <Route path='/redwood' element={<Redwood />} />
         <Route path='/crew' element={<Crew />} />
+        <Route path ='/jericho' element={<Jericho />} />
       </Routes>
     </div>
   );
