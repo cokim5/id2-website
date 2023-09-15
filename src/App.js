@@ -6,6 +6,8 @@ import Projects from './Pages/Projects';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import News from './Pages/News';
+import Redwood from './Pages/Redwood';
+import Crew from './Pages/Crew';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/news' element={<News />} />
+        <Route path='/redwood' element={<Redwood />} />
+        <Route path='/crew' element={<Crew />} />
       </Routes>
     </div>
   );
