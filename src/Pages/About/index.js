@@ -56,7 +56,8 @@ function About(){
                                         Collin Kim
                                     </div>
                                     <div className={styles.text}>
-                                        Lorem ipsum...
+                                        As a college junior, Collin Kim stands out as a remarkable individual with an innate ability for pragmatic problem-solving. He approaches issues methodically, always searching for the next puzzle to unravel. His leadership style is characterized by unwavering strength and vision, placing the well-being of his peers at the forefront. Collin's passion lies in devising practical solutions that drive genuine, positive changes in people's lives.<br /><br /> Get in contact with him here:<br />email: collin@id2.company<br />
+                                        <a href="https://www.linkedin.com/in/collin-kim-a3b70b17b/" target="_blank" ><img src={require('../../assets/linkedin.png')} className={styles.image}/></a>
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +70,8 @@ function About(){
                                         David Hyun
                                     </div>
                                     <div className={styles.text}>
-                                        Lorem ipsum...
+                                    As a college junior, David Hyun shines as an outstanding individual celebrated for his coding prowess and a relentless commitment to conquering challenges. He embodies a methodical mindset, always on the lookout for intricate problems to solve. David thrives on tackling complex puzzles head-on, leveraging his coding skills to decipher and innovate. His passion lies in the thrill of unraveling intricacies and crafting ingenious solutions that pave the way for meaningful progress.<br /><br />Get in contact with him here: <br />email: david@id2.company<br />
+                                    <a href="https://www.linkedin.com/in/david-hyun-5122611a3/" target="_blank" ><img src={require('../../assets/linkedin.png')} className={styles.image}/></a>
                                     </div>
                                 </div>
                             </div>
@@ -82,7 +84,8 @@ function About(){
                                         Hanara Nam
                                     </div>
                                     <div className={styles.text}>
-                                        Lorem ipsum...
+                                    As a college junior, Hanara Nam stands out as a creative visionary, constantly pushing the boundaries of design innovation. With a passion for crafting intricate and detailed wireframes, Hanara brings an unparalleled level of creativity to every project. Her diligent work ethic and lightning-fast pace set her apart, allowing her to transform concepts into remarkable designs with unparalleled efficiency. [CDO's name] thrives in the world of design, where her boundless imagination and unwavering dedication shine brightly. <br /><br />Get in contact with her here: <br />email: hanara@id2.company<br />
+                                    <a href="https://www.linkedin.com/in/hanaranam/" target="_blank" ><img src={require('../../assets/linkedin.png')} className={styles.image}/></a>
                                     </div>
                                 </div>
                             </div>

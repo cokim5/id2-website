@@ -34,9 +34,9 @@ const NavBar = () => {
         </Link>
       </div>
       <div className={`${styles.navRight} ${isMenuOpen ? styles.showMenu : ''}`}>
-        <Link to="/projects" className={styles.link} onClick={() => setIsMenuOpen(false)}>
+        {/* <Link to="/projects" className={styles.link} onClick={() => setIsMenuOpen(false)}>
           PROJECTS
-        </Link>
+        </Link> */}
         <Link to="/about" className={styles.link} onClick={() => setIsMenuOpen(false)}>
           ABOUT US
         </Link>
@@ -54,9 +54,9 @@ const NavBar = () => {
       </div>
       {isMenuOpen && (
         <div className={styles.mobileMenu}>
-          <Link to="/projects" className={styles.link} onClick={() => setIsMenuOpen(false)}>
+          {/* <Link to="/projects" className={styles.link} onClick={() => setIsMenuOpen(false)}>
             PROJECTS
-          </Link>
+          </Link> */}
           <Link to="/about" className={styles.link} onClick={() => setIsMenuOpen(false)}>
             ABOUT US
           </Link>
