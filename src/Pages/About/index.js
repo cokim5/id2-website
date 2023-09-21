@@ -84,7 +84,7 @@ function About(){
                                         Hanara Nam
                                     </div>
                                     <div className={styles.text}>
-                                    As a college junior, Hanara Nam stands out as a creative visionary, constantly pushing the boundaries of design innovation. With a passion for crafting intricate and detailed wireframes, Hanara brings an unparalleled level of creativity to every project. Her diligent work ethic and lightning-fast pace set her apart, allowing her to transform concepts into remarkable designs with unparalleled efficiency. [CDO's name] thrives in the world of design, where her boundless imagination and unwavering dedication shine brightly. <br /><br />Get in contact with her here: <br />email: hanara@id2.company<br />
+                                    As a college junior, Hanara Nam stands out as a creative visionary, constantly pushing the boundaries of design innovation. With a passion for crafting intricate and detailed wireframes, Hanara brings an unparalleled level of creativity to every project. Her diligent work ethic and lightning-fast pace set her apart, allowing her to transform concepts into remarkable designs with unparalleled efficiency. Hanara thrives in the world of design, where her boundless imagination and unwavering dedication shine brightly. <br /><br />Get in contact with her here: <br />email: hanara@id2.company<br />
                                     <a href="https://www.linkedin.com/in/hanaranam/" target="_blank" ><img src={require('../../assets/linkedin.png')} className={styles.image}/></a>
                                     </div>
                                 </div>
